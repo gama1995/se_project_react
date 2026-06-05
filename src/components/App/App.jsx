@@ -2,10 +2,12 @@ import {  useState, useEffect } from "react";
 import "./App.css";
 import { coordinates } from "../../utils/constants";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+
 
 const APIkey = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -51,6 +53,7 @@ useEffect(() => {
     <div className="page__content">
       <Header handleAddClicked={handleAddClicked} weatherData={weatherData} />
       <Main weatherData={weatherData} handleCardClick={handleCardClick} />
+      <Footer />
     </div>
     <ModalWithForm title="New garment" 
     buttonText="Add garment"
