@@ -1,6 +1,8 @@
+const apikey = import.meta.env.VITE_WEATHER_API_KEY;
+
 export const getWeather = ({ latitude, longitude }, apikey) => {
    return fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apikey}`
     ).then((res) => {
         if (!res.ok) {
             return Promise.reject(`Error: ${res.status}`);

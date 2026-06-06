@@ -8,7 +8,7 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 
-const APIkey = import.meta.env.VITE_WEATHER_API_KEY;
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
 function App() {
 const [weatherData, setWeatherData] = useState({ 
@@ -37,7 +37,7 @@ const closeActiveModal = () => {
 };
 
 useEffect(() => {
-    getWeather(coordinates, APIkey)
+    getWeather(coordinates, apiKey)
     .then((data) => {
       const filteredData = filterWeatherData(data);
       setWeatherData(filteredData);
