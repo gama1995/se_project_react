@@ -11,7 +11,6 @@ function ModalWithForm({ children, buttonText, title, name, isOpen, onClose }) {
           onClick={onClose}
           aria-label="Close modal"
         >
-          ×
         </button>
         <form className="modal__form">
           {children}
