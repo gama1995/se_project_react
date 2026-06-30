@@ -1,8 +1,11 @@
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import avatar from "../../assets/avatar.svg";
 
-function Header({ handleAddClicked, weatherData }) {
+
+function Header({ handleAddClicked, weatherData, currentTemperatureUnit, handleToggleSwitchChange }) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -14,6 +17,10 @@ function Header({ handleAddClicked, weatherData }) {
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
+      <ToggleSwitch
+      currentTemperatureUnit={currentTemperatureUnit}
+      handleToggleSwitchChange={handleToggleSwitchChange}
+      />
       <button
         type="button"
         className="header__add-clothes-btn"
@@ -21,10 +28,12 @@ function Header({ handleAddClicked, weatherData }) {
       >
         + Add Clothes
       </button>
+      <NavLink className="header__nav-link" to="/profile">
       <div className="header__user-container">
         <p className="header__username">Terrence Tegegne</p>
         <img src={avatar} alt="Terrence Tegegne" className="header__avatar" />
       </div>
+      </NavLink>
     </header>
   );
 }

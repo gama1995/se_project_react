@@ -1,7 +1,9 @@
 import "./Main.css";
 import WeatherCard from "../WeatherCard/WeatherCard";
 import ItemCard from "../ItemCard/ItemCard";
-import { defaultClothingItems } from "../../utils/constants";
+import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnit";
+
+
 
 function Main({ weatherData, clothingItems, handleCardClick }) {
   return (
@@ -9,7 +11,7 @@ function Main({ weatherData, clothingItems, handleCardClick }) {
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <p className="cards__text">
-          Today is {weatherData.temp.F} ° F / You may want to wear:
+          Today is {weatherData.temp[CurrentTemperatureUnitContext]} ° F / You may want to wear:
         </p>
         <ul className="cards__list">
           {clothingItems

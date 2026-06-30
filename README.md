@@ -64,7 +64,10 @@ Users can view weather information, browse clothing items, and interact with a r
 * GitHub: https://github.com/gama1995
 
 
-
+## Project Pitch Video
+ 
+ Check out [this video](https://drive.google.com/file/d/1fEbjYg81rBhXHhU7mBYOXov4SsW4iJDL/view?usp=sharing), where I describe my 
+ project and some challenges I faced while building it.
 
 
 
