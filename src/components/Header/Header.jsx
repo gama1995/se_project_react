@@ -13,7 +13,13 @@ function Header({ handleAddClicked, weatherData, currentTemperatureUnit, handleT
 
   return (
     <header className="header">
-      <img src={logo} alt="WTWR Logo" className="header__logo" />
+      <NavLink to="/">
+      <img  
+      src={logo} 
+      alt="WTWR Logo"
+      className="header__logo" 
+      />
+      </NavLink>
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
