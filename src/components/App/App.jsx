@@ -26,6 +26,7 @@ function App() {
     city: "",
     condition: "",
     isDay: false,
+    imageUrl: ""
   });
   const [clothingItems, setClothingItems] = useState([]);
   const [activeModal, setActiveModal] = useState("");
@@ -119,6 +120,7 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothesItem={clothingItems}
+                  onAddItem={handleAddClicked}
                 />
               }
             />
