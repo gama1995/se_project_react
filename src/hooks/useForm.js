@@ -8,14 +8,13 @@ export function useForm(defaultValues) {
 
         setValues((values) => ({ 
             ...values, 
-                [name]: value 
+                [name]: value, 
             }));
+        };
 
             const resetForm = () => {
     setValues(defaultValues);
   };
-
-    }
 
     return { values, setValues, handleChange, resetForm };
 }
