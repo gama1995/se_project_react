@@ -9,7 +9,7 @@ export default function ClothesSection({
   return (
     <div className="clothes-section">
       <div className="clothes-section__row">
-        <p>Text</p>
+        <p>Your items</p>
          <button
           type="button"
           className="clothes-section__add-btn"

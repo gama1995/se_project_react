@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import { useForm } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
+
   const defaultValues = {
     name: "",
     imageUrl: "",
     weather: "",
   };
+
+  const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
   const { values, handleChange, resetForm } = useForm(defaultValues);
 
     useEffect(() => {
@@ -105,7 +107,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
             value="cold"
             onChange={handleChange}
           />
-          <span className="modal__error" id="palce-weather-error" />
+          <span className="modal__error" id="place-weather-error" />
           Cold
         </label>
       </fieldset>

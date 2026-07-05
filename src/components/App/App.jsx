@@ -120,7 +120,7 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothesItem={clothingItems}
-                  onAddItem={handleAddClicked}
+                  onAddItemClick={handleAddClicked}
                 />
               }
             />
