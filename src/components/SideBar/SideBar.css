@@ -1,11 +1,11 @@
-.sidebar__profile {
+.sidebar__user-container {
     display: flex;
     flex-direction: row-reverse;
      align-items: center;
     gap: 15px;
 }
 
-.header__username {
+.sidebar__username {
     margin: 0;
 }
 

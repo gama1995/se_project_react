@@ -21,11 +21,20 @@
 }
 
 .modal__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px 32px 32px;
 }
 
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .modal__caption {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -36,4 +45,15 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.modal__delete-button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: #ff4d00;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  cursor: pointer;
 }

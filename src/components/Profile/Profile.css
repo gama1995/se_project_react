@@ -1,13 +1,8 @@
 .profile {
     display: flex;
-    justify-content: space-between;
+    gap: 116px;
 }
 
-.clothes-section__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0;
-  margin: 16px 0 0;
-  list-style: none;
+.clothes-section {
+    flex: 1;
 }
