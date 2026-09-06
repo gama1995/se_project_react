@@ -1,0 +1,34 @@
+.card {
+    width: 323px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.card__name {
+position: absolute;
+top: 15px;  
+margin: 0;  
+}
+
+.card__image {
+width: 100%;
+}
+
+.card__like-button {
+   position: absolute;
+  top: 13px;
+  left: 210px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 0;
+  z-index: 3;
+}
+
+.card__like-button_active {
+  font-weight: 700;
+}
