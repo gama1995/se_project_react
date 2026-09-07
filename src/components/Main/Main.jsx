@@ -6,7 +6,12 @@ import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnit
 
 
 
-function Main({ weatherData, clothingItems, handleCardClick }) {
+function Main({
+   weatherData, 
+   clothingItems, 
+   handleCardClick,
+   onCardLike
+  }) {
  const { currentTemperatureUnit } = useContext(
     CurrentTemperatureUnitContext
  );

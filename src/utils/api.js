@@ -1,3 +1,5 @@
+import checkresponse from "./checkResponse";
+
 const baseUrl = "http://localhost:3001";
 
 const headers = {
@@ -9,10 +11,10 @@ const handleServerResponse = (res) => {
 };
 
 export const getItems = () =>
-  fetch(`${baseUrl}/items`, { headers }).then(handleServerResponse);
+  fetch(`${baseUrl}/items`, { headers }).then(checkResponse);
 
 export const addItem = ({ name, imageUrl, weather }) => {
-const token = localStorage.getItem("jwt");
+  const token = localStorage.getItem("jwt");
 
   return fetch(`${baseUrl}/items`, {
     method: "POST",
@@ -25,19 +27,19 @@ const token = localStorage.getItem("jwt");
       imageUrl,
       weather,
     }),
-  }).then(handleServerResponse);
+  }).then(checkResponse);
 };
 
 export const removeItem = (itemID) => {
   const token = localStorage.getItem("jwt");
 
-    return fetch(`${baseUrl}/items/${itemID}`, {
+  return fetch(`${baseUrl}/items/${itemID}`, {
     method: "DELETE",
     headers: {
       ...headers,
       authorization: `Bearer ${token}`,
     },
-  }).then(handleServerResponse);
+  }).then(checkResponse);
 };
 
 export const addCardLike = (itemID) => {
@@ -49,7 +51,7 @@ export const addCardLike = (itemID) => {
       ...headers,
       authorization: `Bearer ${token}`,
     },
-  }).then(handleServerResponse);
+  }).then(checkResponse);
 };
 
 export const removeCardLike = (itemID) => {
@@ -61,7 +63,7 @@ export const removeCardLike = (itemID) => {
       ...headers,
       authorization: `Bearer ${token}`,
     },
-  }).then(handleServerResponse);
+  }).then(checkResponse);
 };
 
 export const updateUserProfile = ({ name, avatar }) => {
@@ -77,6 +79,5 @@ export const updateUserProfile = ({ name, avatar }) => {
       name,
       avatar,
     }),
-  }).then(handleServerResponse);
+  }).then(checkResponse);
 };
-

@@ -25,7 +25,7 @@ return (
               </div>
               <button
   type="button"
-  className="sidebar__edit-btn"
+  className="sidebar__edit-button"
   onClick={onEditProfile}
 >
   Edit Profile
