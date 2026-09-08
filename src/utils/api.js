@@ -1,4 +1,4 @@
-import checkresponse from "./checkResponse";
+import checkResponse from "./checkResponse";
 
 const baseUrl = "http://localhost:3001";
 

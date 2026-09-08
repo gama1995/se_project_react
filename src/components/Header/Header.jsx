@@ -1,7 +1,9 @@
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
 import logo from "../../assets/logo.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 function Header({
   handleAddClicked,
@@ -12,6 +14,8 @@ function Header({
   currentTemperatureUnit,
   handleToggleSwitchChange,
 }) {
+  const currentUser = useContext(CurrentUserContext);
+
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
