@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import logo from "../../assets/logo.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import  CurrentUserContext  from "../../contexts/CurrentUserContext";
 
 function Header({
   handleAddClicked,
@@ -48,7 +48,7 @@ function Header({
 
           <NavLink className="header__nav-link" to="/profile">
             <div className="header__user-container">
-              <p className="hearder__username">{currentUser.name}</p>
+              <p className="header__username">{currentUser.name}</p>
 
               {currentUser.avatar ? (
                 <img
@@ -58,7 +58,7 @@ function Header({
                 />
               ) : (
                 <div className="header__avatar-placeholder">
-                  {currentUser.name.charAt(0).toUpperCase()}
+                  {currentUser.name?.charAt(0).toUpperCase()}
                 </div>
               )}
             </div>
