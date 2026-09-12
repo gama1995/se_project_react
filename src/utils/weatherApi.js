@@ -16,7 +16,7 @@ const weatherOptions = [
 
 export const getWeather = ({ latitude, longitude }, apiKey) => {
   return fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`,
   ).then((res) => {
     if (!res.ok) {
       return Promise.reject(`Error: ${res.status}`);
@@ -29,10 +29,10 @@ export const filterWeatherData = (data) => {
   const condition = data.weather[0].main.toLowerCase();
   const isDayTime = isDay(data.sys, Date.now());
   const weatherOption = weatherOptions.find(
-    (option) => option.condition === condition && option.isDay === isDayTime
+    (option) => option.condition === condition && option.isDay === isDayTime,
   );
   const defaultWeatherOption = weatherOptions.find(
-    (option) => option.condition === "default" && option.isDay === isDayTime
+    (option) => option.condition === "default" && option.isDay === isDayTime,
   );
 
   const tempF = Math.round(data.main.temp);

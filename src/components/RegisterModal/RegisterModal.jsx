@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function RegisterModal({ isOpen, onClose, onRegister }) {
+function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
   const [email, setEmail] = useState("");
@@ -74,6 +74,13 @@ function RegisterModal({ isOpen, onClose, onRegister }) {
           required
         />
       </label>
+      <button
+        type="button"
+        className="modal__switch-button"
+        onClick={onLoginClick}
+      >
+        or Log In
+      </button>
     </ModalWithForm>
   );
 }

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import logo from "../../assets/logo.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import  CurrentUserContext  from "../../contexts/CurrentUserContext";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function Header({
   handleAddClicked,
@@ -65,7 +65,7 @@ function Header({
           </NavLink>
         </>
       ) : (
-        <>
+        <div className="header__auth-container">
           <button
             type="button"
             className="header__auth-button"
@@ -80,7 +80,7 @@ function Header({
           >
             Log In
           </button>
-        </>
+        </div>
       )}
     </header>
   );

@@ -6,4 +6,6 @@ const checkResponse = (res) => {
   return Promise.reject(`Error: ${res.status}`);
 };
 
-export default checkResponse;
+export const request = (url, options) => {
+  return fetch(url, options).then(checkResponse);
+};
