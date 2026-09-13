@@ -1,14 +1,7 @@
-import checkresponse from "./checkResponse";
+import { checkResponse } from "./checkResponse";
 
 const baseUrl = "http://localhost:3001";
 
-const checkResponse = (res) => {
-  if (res.ok) {
-    return res.json();
-  }
-
-  return Promise.reject(`Error: ${res.status}`);
-};
 
 export const register = ({ name, avatar, email, password }) => {
   return fetch(`${baseUrl}/signup`, {

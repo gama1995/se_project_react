@@ -188,21 +188,25 @@ function App() {
     setIsLoggedIn(false);
   };
 
-  const handleCardLike = ({ _id, isLiked }) => {
-    if (!isLoggedIn) {
-      return;
-    }
+const handleCardLike = ({ _id, isLiked }) => {
+  if (!isLoggedIn) {
+    return;
+  }
 
-    const request = isLiked ? removeCardLike(_id) : addCardLike(_id);
+  const request = isLiked ? removeCardLike(_id) : addCardLike(_id);
 
-    request
-      .then((updatedCard) => {
-        setClothingItems((items) =>
-          items.map((item) => (item._id === _id ? updatedCard : item)),
-        );
-      })
-      .catch(console.error);
-  };
+  request
+    .then((updatedCard) => {
+      setClothingItems((items) =>
+        items.map((item) =>
+          item._id === _id ? updatedCard : item
+        )
+      );
+    })
+    .catch((err) => {
+      console.error("LIKE ERROR:", err);
+    });
+};
 
   const handleEditProfileClick = () => {
     setActiveModal("edit-profile");

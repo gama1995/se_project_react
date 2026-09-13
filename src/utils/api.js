@@ -1,4 +1,4 @@
-import checkResponse from "./checkResponse";
+import { checkResponse, request } from "./checkResponse";
 
 const baseUrl = "http://localhost:3001";
 
@@ -62,7 +62,7 @@ export const removeCardLike = (itemID) => {
       ...headers,
       authorization: `Bearer ${token}`,
     },
-  }).then(checkResponse);
+  });
 };
 
 export const updateUserProfile = ({ name, avatar }) => {
