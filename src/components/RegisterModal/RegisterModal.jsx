@@ -23,6 +23,8 @@ function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
       title="Sign up"
       name="register"
       buttonText="Sign up"
+      secondaryButtonText="or Log In"
+      secondaryClick={onLoginClick}
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
@@ -74,13 +76,6 @@ function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
           required
         />
       </label>
-      <button
-        type="button"
-        className="modal__switch-button"
-        onClick={onLoginClick}
-      >
-        or Log In
-      </button>
     </ModalWithForm>
   );
 }

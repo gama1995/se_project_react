@@ -2,7 +2,6 @@ import { checkResponse } from "./checkResponse";
 
 const baseUrl = "http://localhost:3001";
 
-
 export const register = ({ name, avatar, email, password }) => {
   return fetch(`${baseUrl}/signup`, {
     method: "POST",

@@ -116,12 +116,30 @@
 }
 
 .modal__submit {
-  width: 124px;
+  min-width: 86px;
   height: 36px;
   border: none;
   border-radius: 4px;
   background-color: #000;
   color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.modal__buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.modal__switch-button {
+  height: 36px;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+  color: #000;
   font-size: 16px;
   line-height: 20px;
   cursor: pointer;
