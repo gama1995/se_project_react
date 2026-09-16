@@ -50,13 +50,6 @@ function LoginModal({ isOpen, onClose, onLogin, onRegisterClick }) {
           required
         />
       </label>
-      <button
-        type="button"
-        className="modal__switch-button"
-        onClick={onRegisterClick}
-      >
-        or Sign Up
-      </button>
     </ModalWithForm>
   );
 }

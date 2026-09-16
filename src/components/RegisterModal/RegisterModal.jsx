@@ -24,7 +24,7 @@ function RegisterModal({ isOpen, onClose, onRegister, onLoginClick }) {
       name="register"
       buttonText="Sign up"
       secondaryButtonText="or Log In"
-      secondaryClick={onLoginClick}
+      onSecondaryClick={onLoginClick}
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
